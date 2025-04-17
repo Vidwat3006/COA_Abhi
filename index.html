@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Pipeline Performance Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>CPU Pipeline Performance Dashboard</h1>
+        </header>
+        
+        <div class="metrics-container">
+            <div class="metric-card">
+                <h3>Pipeline Utilization</h3>
+                <canvas id="utilizationChart"></canvas>
+            </div>
+            
+            <div class="metric-card">
+                <h3>Instruction Throughput</h3>
+                <canvas id="throughputChart"></canvas>
+            </div>
+            
+            <div class="metric-card">
+                <h3>Pipeline Stalls</h3>
+                <canvas id="stallsChart"></canvas>
+            </div>
+            
+            <div class="metric-card">
+                <h3>Branch Prediction Accuracy</h3>
+                <canvas id="branchChart"></canvas>
+            </div>
+        </div>
+
+        <div class="pipeline-visualization">
+            <h2>Pipeline Stage Visualization</h2>
+            <div class="pipeline-stages">
+                <div class="stage" id="fetch">Fetch</div>
+                <div class="stage" id="decode">Decode</div>
+                <div class="stage" id="execute">Execute</div>
+                <div class="stage" id="memory">Memory</div>
+                <div class="stage" id="writeback">Writeback</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="startSimulation">Start Simulation</button>
+            <button id="pauseSimulation">Pause Simulation</button>
+            <button id="resetSimulation">Reset Simulation</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
